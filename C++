@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+
+class DezvoltatorWeb {
+public:
+    // Metodele pentru a seta informațiile personale
+    void setNume(const std::string& nume) {
+        nume_ = nume;
+    }
+
+    void setAbilitati(const std::string& abilitati) {
+        abilitati_ = abilitati;
+    }
+
+    void setProiecte(const std::string& proiecte) {
+        proiecte_ = proiecte;
+    }
+
+    // Metoda pentru a afișa informațiile personale
+    void afiseazaInformatii() {
+        std::cout << "Nume: " << nume_ << std::endl;
+        std::cout << "Abilitati: " << abilitati_ << std::endl;
+        std::cout << "Proiecte: " << proiecte_ << std::endl;
+    }
+
+private:
+    std::string nume_;
+    std::string abilitati_;
+    std::string proiecte_;
+};
+
+int main() {
+    // Crearea unui obiect pentru dezvoltatorul web
+    DezvoltatorWeb dezvoltator;
+
+    // Setarea informațiilor personale
+    dezvoltator.setNume("Numele Tau");
+    dezvoltator.setAbilitati("C++, HTML, CSS, JavaScript");
+    dezvoltator.setProiecte("Proiect1, Proiect2");
+
+    // Afișarea informațiilor personale
+    dezvoltator.afiseazaInformatii();
+
+    return 0;
+}
